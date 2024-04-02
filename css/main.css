@@ -95,7 +95,7 @@ div.center {
 #wrapper
 {
 	max-width: 1024px;
-	min-height: calc(100vh - 157px);
+	min-height: calc(100vh - 139px);
 	padding-right: 15px;
 	padding-left: 15px
 }
