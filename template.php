@@ -72,7 +72,6 @@ class Template{
         <link rel="stylesheet" href="<?php echo WEB_URL;?>/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo WEB_URL;?>/css/main.css" media="screen">
         <link rel="stylesheet" href="<?php echo WEB_URL;?>/css/print.css" media="print">
-        <link rel="stylesheet" href="<?php echo WEB_URL;?>/css/custom.css" media="screen">
         <link rel="apple-touch-icon" sizes="57x57" href="<?php echo WEB_URL;?>/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="<?php echo WEB_URL;?>/favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="<?php echo WEB_URL;?>/favicon/apple-icon-72x72.png">
@@ -91,17 +90,6 @@ class Template{
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-        <style>
-          .navbar, #footerwrap {
-            display: none!important;
-          }
-          body {
-            margin-top: 5px!important;
-          }
-          .text-center h2 {
-            display:none!important;
-          }
-        </style>
       </head>
       <body>
         <div class="navbar navbar-default" role="navigation">
@@ -250,7 +238,6 @@ class Template{
     <?php }?>
     <script src="<?php echo WEB_URL;?>/js/vendor/bootstrap.min.js"></script>
     <script src="<?php echo WEB_URL;?>/js/main.js"></script>
-    <script src="<?php echo WEB_URL;?>/js/custom.js"></script>
     <?php if ( defined('GOOGLE_RECAPTCHA') ) { ?><script src='https://www.google.com/recaptcha/api.js'></script><?php }?>
   </body>
   </html>
