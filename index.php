@@ -118,3 +118,10 @@ Template::render_header("Status");
 
 Template::render_footer();
 }
+?>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<?php

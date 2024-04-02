@@ -104,27 +104,12 @@ class Constellation
     }
     if (!$admin)
     {
-      ?>
-      <script>
-      $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-      </script>
-      <?php
-      //echo '<div id="status-container" class="clearfix">';
-      //$arrCompletedGroups = array();
+      
       foreach($array as $service){
-        //print_r($service);
-        //if ( !empty($service->group_name) && !in_array($service->group_name, $arrCompletedGroups)) {
-//print $service->name;
-        //  $arrCompletedGroups[] = $service['group_name'];
-        //  $service->render(true);
-        //} else {
         $service->render();
-        //}
       }
       echo '</ul>';
-      //echo '</div>';
+      return $array;
     }
     else{
       return $array;
