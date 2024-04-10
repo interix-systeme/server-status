@@ -1,4 +1,11 @@
 <?php
+
+// enable this for debugging
+// error_reporting(E_ALL);
+// ini_set('display_startup_errors', 1);
+// ini_set('display_errors', 1);
+// ini_set("log_errors", 1);
+
 $statuses = array(_("Major outage"), _("Minor outage"), _("Planned maintenance"), _("Operational") );
 $classes = array("danger", "warning", "primary", "success" );
 $icons = array("fa fa-times", "fa fa-exclamation", "fa fa-info", "fa fa-check" );

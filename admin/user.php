@@ -47,7 +47,7 @@ Template::render_header(_("User"), true);
 ?>
 <div class="text-center">
 	  <h1><?php 
-	  if ($_SESSION['user'] == $_GET['id'])
+	  if (isset($_GET['id']) && isset($_SESSION['user']) && $_SESSION['user'] == $_GET['id'])
 	  {
 		echo _("User settings");
 	  }else{
