@@ -1,4 +1,11 @@
 <?php
+
+// enable this for debugging
+// error_reporting(E_ALL);
+// ini_set('display_startup_errors', 1);
+// ini_set('display_errors', 1);
+// ini_set("log_errors", 1);
+
 $statuses = array(_("Major outage"), _("Minor outage"), _("Planned maintenance"), _("Operational") );
 $classes = array("danger", "warning", "primary", "success" );
 $icons = array("fa fa-times", "fa fa-exclamation", "fa fa-info", "fa fa-check" );
@@ -26,7 +33,8 @@ class Template{
        if ( 'admin' == $str_url ) {
            $strSubsMenu = '';
        } else {
-           if (SUBSCRIBE_EMAIL || SUBSCRIBE_TELEGRAM ) {
+        $strSubsMenu = '';
+           if (defined('SUBSCRIBE_EMAIL') || defined('SUBSCRIBE_TELEGRAM') ) {
                // Subscriber menu is to be shown...
                $strSubsMenu = '<ul class="nav navbar-nav mr-auto">';
                // If subscriber is not logged on, display subscriber menus
@@ -56,9 +64,9 @@ class Template{
       <html lang="en">
       <head>
        <?php
-       if(!admin){
+       if(defined('admin') && !admin){
         $headfile = fopen("head.txt", "r") or die("Unable to open head.txt!");
-        $head_additionalcode = fread($versionfile,filesize("head.txt"));
+        $head_additionalcode = fread($versionfile ?? "Version2Beta8",filesize("head.txt"));
         fclose($headfile);
         echo $head_additionalcode;
         }
@@ -237,7 +245,7 @@ class Template{
     <?php }?>
     <script src="<?php echo WEB_URL;?>/js/vendor/bootstrap.min.js"></script>
     <script src="<?php echo WEB_URL;?>/js/main.js"></script>
-    <?php if ( GOOGLE_RECAPTCHA ) { ?><script src='https://www.google.com/recaptcha/api.js'></script><?php }?>
+    <?php if ( defined('GOOGLE_RECAPTCHA') ) { ?><script src='https://www.google.com/recaptcha/api.js'></script><?php }?>
   </body>
   </html>
 <?php
